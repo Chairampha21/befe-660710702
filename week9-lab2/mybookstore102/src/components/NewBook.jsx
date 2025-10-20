@@ -11,7 +11,7 @@ const NewBook = () => {
     const fetchBooks = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`${API_BASE}/api/v1/books/`, { cache: 'no-store' });
+        const res = await fetch(`${API_BASE}/api/v1//books/new`, { cache: 'no-store' });
         if (!res.ok) throw new Error('Failed to fetch books');
         const raw = await res.json();
         const arr = Array.isArray(raw) ? raw : raw?.data || [];
